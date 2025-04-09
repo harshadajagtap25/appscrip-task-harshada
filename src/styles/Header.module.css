@@ -1,0 +1,213 @@
+.blackStrip {
+  height: 32px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.blackStripImageText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.blackStripText {
+  color: #eb4c6b;
+  font-size: 12px;
+}
+
+.blackStripImageText {
+  white-space: nowrap;
+  will-change: transform;
+  animation: blackStripImageText 7s linear infinite;
+}
+@keyframes blackStripImageText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.header {
+  padding: 32px 96px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.headerBrandInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerBrandInfo > div {
+  width: 33.33%;
+}
+
+.brandName {
+  font-size: 36px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.headerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+
+.headerIconsLanguage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  span {
+    color: #252020;
+    font-size: 16px;
+  }
+}
+
+.headerTabs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-top: 60px;
+}
+
+.headerTabsText {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #252020;
+  text-transform: uppercase;
+}
+
+.headerTitleBoxWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 0px;
+}
+.headerTitleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 60%;
+}
+
+.headerTitleText {
+  text-align: center;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.headerSubTitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: normal;
+  width: 80%;
+}
+
+.hambergerLogoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.mobileTabsWrapper {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 16px;
+  }
+
+  .headerBrandInfo > div {
+    width: auto;
+  }
+
+  .brandName {
+    font-size: 20px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobileMenuButton {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  .headerIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+  }
+  .headerIconsLanguage {
+    display: none;
+  }
+
+  .headerTabs {
+    display: none;
+  }
+  .mobileTabsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #252020;
+  }
+  .tabDivider {
+    height: 14px;
+    border: 1px solid #bfc8cd;
+  }
+
+  .headerTitleText {
+    font-size: 24px;
+    letter-spacing: 0px;
+  }
+
+  .headerSubTitle {
+    font-size: 16px;
+    width: 100%;
+    line-height: 22px;
+  }
+
+  .headerTitleBox {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .headerTitleBoxWrapper {
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .blackStripImageText {
+    animation: blackStripImageText 10s linear infinite;
+  }
+}

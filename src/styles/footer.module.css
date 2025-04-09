@@ -1,0 +1,326 @@
+.footerMain {
+  width: 100%;
+  background-color: #000000;
+  padding: 50px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footerFirstWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 30px;
+}
+
+.footerSubscribeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  gap: 20px;
+}
+
+.footerSubscribeTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footerSubscribeSubtitle {
+  font-size: 16px;
+  color: white;
+}
+
+.footerSubscribeInputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footerSubscribeInput {
+  width: 60%;
+  background-color: white;
+  padding: 14px 24px;
+}
+
+.footerSubscribeButton {
+  width: 30%;
+  border: 1px solid #ffffff;
+  padding: 14px 24px;
+  color: white;
+  text-align: center;
+  opacity: 0.3;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contactUs {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.contactUsTitle {
+  font-size: 16px;
+}
+
+.contactUsWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contactUsDetails {
+  font-size: 16px;
+  color: white;
+}
+
+.contactUsDescription {
+  font-size: 12px;
+  color: white;
+}
+
+.contactUsCurrency {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.contactUsCurrency > div {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.footerSecondWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  gap: 20px;
+}
+
+.followUs {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.footerLinks {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footerLinksWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 18px;
+}
+.linksTitle {
+  font-weight: bold;
+}
+
+.socialMediaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mediaIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.socialMediaTitle {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .footerMain {
+    width: 100%;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .footerFirstWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 20px;
+    gap: 10px;
+  }
+  .footerSecondWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .footerSubscribeForm {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .footerSubscribeInputWrapper {
+    margin-top: 15px;
+  }
+  .footerSubscribeTitle {
+    font-size: 16px;
+  }
+  .footerSubscribeSubtitle {
+    font-size: 14px;
+  }
+
+  .footerSubscribeInput {
+    width: 70%;
+    background-color: white;
+    padding: 14px 24px;
+  }
+
+  .footerSubscribeButton {
+    width: 109px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .contactUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0px;
+  }
+  .contactUsTitle {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+  .contactUsWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .contactUsDetails {
+    font-size: 14px;
+  }
+  .contactUsDescription {
+    display: none;
+  }
+
+  .contactUsCurrency > div {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  .socialMediaTitle {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .footerLinksWrapper {
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .linksTitle {
+    font-size: 16px;
+  }
+  .linkItem {
+    font-size: 12px;
+  }
+  .followUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .socialMediaWrapper {
+    width: 100%;
+  }
+  .socialMediaWrapperBorder {
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}

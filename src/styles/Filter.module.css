@@ -1,0 +1,95 @@
+.filterMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.filterTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.filterTitleArrowImage {
+  cursor: pointer;
+}
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+.filterItemBorder {
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.categoryItemLabel {
+  font-size: 16px;
+  color: #252020;
+  text-transform: capitalize;
+}
+.unselectCategories {
+  color: #bfc8cd;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.activeUnselect {
+  color: #252020;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.categoryCheckbox {
+  font-size: 20px;
+}
+
+.categoryWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .filterTitle {
+    font-size: 12px;
+  }
+
+  .filterMain {
+    gap: 10px;
+    padding: 10px;
+  }
+  .filterItem {
+    gap: 15px;
+  }
+
+  .unselectCategories {
+    font-size: 14px;
+  }
+  .categoryWrapper {
+    gap: 15px;
+  }
+}
