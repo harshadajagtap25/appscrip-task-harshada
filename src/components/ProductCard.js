@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const productNameUpdate = (name) => {
-    return name.length > 25 ? name.slice(0, 25) + "..." : name;
+    return name.length > 20 ? name.slice(0, 20) + "..." : name;
   };
 
   const toggleFavorite = (e) => {
@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
         className={styles.productImage}
       />
       <div className={styles.productInfoNFav}>
-        <div className={styles.productInfo}>
+        <div className={styles.productInfo} title={product.title}>
           <h2 className={styles.productTitle}>
             {productNameUpdate(product.title)}
           </h2>

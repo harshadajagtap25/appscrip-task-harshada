@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ProductListNFilter } from "@/components/ProductListNFilter";
 import { useAppContext } from "@/contexts/AppContext";
 import { FooterComponent } from "@/components/Footer";
+import Loader from "@/components/Loader";
 
 export async function getServerSideProps({ res }) {
   res.setHeader(
@@ -50,10 +51,19 @@ export async function getServerSideProps({ res }) {
   }
 }
 
-export default function Home({ products, apiCategories }) {
-  const { setFilteredProducts, setCategories, setIsMobile } = useAppContext();
+export default function Home({ products, apiCategories, error }) {
+  const {
+    setFilteredProducts,
+    setCategories,
+    setIsMobile,
+    isDataLoading,
+    setIsDataLoading,
+  } = useAppContext();
 
   useEffect(() => {
+    if (products || apiCategories || error) {
+      setIsDataLoading(false);
+    }
     setFilteredProducts(products);
     setCategories(apiCategories);
 
@@ -66,7 +76,7 @@ export default function Home({ products, apiCategories }) {
     window.addEventListener("resize", checkIfMobile);
 
     return () => window.removeEventListener("resize", checkIfMobile);
-  }, []);
+  }, [setIsDataLoading]);
 
   return (
     <>
@@ -117,6 +127,7 @@ export default function Home({ products, apiCategories }) {
         />
       </Head>
 
+      {isDataLoading && <Loader />}
       <main className={styles.main}>
         <HeaderComponent />
         <ProductListNFilter />
