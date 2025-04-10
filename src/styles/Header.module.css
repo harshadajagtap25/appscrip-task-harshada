@@ -70,10 +70,11 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  span {
-    color: #252020;
-    font-size: 16px;
-  }
+}
+
+.headerLanguageSpan {
+  color: #252020;
+  font-size: 16px;
 }
 
 .headerTabs {

@@ -97,7 +97,7 @@ export default function HeaderComponent() {
               ))}
 
             <div className={styles.headerIconsLanguage}>
-              <span>ENG</span>
+              <span className={styles.headerLanguageSpan}>ENG</span>
               <Image
                 src="/images/arrow-down.png"
                 alt="arrow-down"
