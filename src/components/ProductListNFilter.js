@@ -4,6 +4,7 @@ import Filter from "./Filter";
 import ProductCard from "./ProductCard";
 import styles from "../styles/ProductListNFilterWrapper.module.css";
 import { useAppContext } from "@/contexts/AppContext";
+
 export const ProductListNFilter = () => {
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

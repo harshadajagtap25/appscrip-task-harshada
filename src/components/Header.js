@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Header.module.css";
 import React from "react";
 import { useAppContext } from "@/contexts/AppContext";
+
 export default function HeaderComponent() {
   const { isMobile } = useAppContext();
 

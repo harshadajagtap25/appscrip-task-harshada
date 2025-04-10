@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/footer.module.css";
 import Image from "next/image";
 import { useAppContext } from "@/contexts/AppContext";
 
 export const FooterComponent = () => {
   const { isMobile } = useAppContext();
+  const [isFirstQuickLinksOpened, setIsFirstQuickLinksOpened] = useState(false);
+  const [isSecondQuickLinksOpened, setIsSecondQuickLinksOpened] =
+    useState(false);
 
   const links = [
     "About Us",
@@ -33,6 +36,13 @@ export const FooterComponent = () => {
     "/images/payment_5.png",
     "/images/payment_6.png",
   ];
+
+  const toggleFirstQuickLinksExpand = () => {
+    setIsFirstQuickLinksOpened(!isFirstQuickLinksOpened);
+  };
+  const toggleSecondQuickLinksExpand = () => {
+    setIsSecondQuickLinksOpened(!isSecondQuickLinksOpened);
+  };
 
   const socialMediaIcons = ["/images/instagram.png", "/images/linkedin.png"];
   return (
@@ -83,20 +93,79 @@ export const FooterComponent = () => {
       <div className={styles.footerSecondWrapper}>
         <div className={styles.footerLinks}>
           <div className={styles.footerLinksWrapper}>
-            <div className={styles.linksTitle}>mettā muse</div>
-            {links.map((item, index) => (
-              <div key={index} className={styles.linkItem}>
-                {item}
-              </div>
-            ))}
+            <div
+              className={styles.linksTitleWrapper}
+              onClick={isMobile ? toggleFirstQuickLinksExpand : undefined}
+              role={isMobile ? "button" : undefined}
+              aria-expanded={isMobile ? isFirstQuickLinksOpened : undefined}
+              tabIndex={isMobile ? 0 : undefined}
+            >
+              <div className={styles.linksTitle}>mettā muse</div>
+              {isMobile && (
+                <div
+                  className={`${styles.arrowIcon} ${
+                    isFirstQuickLinksOpened ? styles.rotated : ""
+                  }`}
+                >
+                  <Image
+                    src="/images/arrow-down-white.png"
+                    alt="arrow-down-white"
+                    width={12}
+                    height={12}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div
+              className={`${styles.linksContainer} ${
+                isMobile && !isFirstQuickLinksOpened ? styles.hidden : ""
+              }`}
+            >
+              {links.map((item, index) => (
+                <div key={index} className={styles.linkItem}>
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
+
           <div className={styles.footerLinksWrapper}>
-            <div className={styles.linksTitle}>QUICK LINKS</div>
-            {quickLinks.map((item, index) => (
-              <div key={index} className={styles.linkItem}>
-                {item}
-              </div>
-            ))}
+            <div
+              className={styles.linksTitleWrapper}
+              onClick={isMobile ? toggleSecondQuickLinksExpand : undefined}
+              role={isMobile ? "button" : undefined}
+              aria-expanded={isMobile ? isSecondQuickLinksOpened : undefined}
+              tabIndex={isMobile ? 0 : undefined}
+            >
+              <div className={styles.linksTitle}>QUICK LINKS</div>
+              {isMobile && (
+                <div
+                  className={`${styles.arrowIcon} ${
+                    isSecondQuickLinksOpened ? styles.rotated : ""
+                  }`}
+                >
+                  <Image
+                    src="/images/arrow-down-white.png"
+                    alt="arrow-down-white"
+                    width={12}
+                    height={12}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div
+              className={`${styles.linksContainer} ${
+                isMobile && !isSecondQuickLinksOpened ? styles.hidden : ""
+              }`}
+            >
+              {quickLinks.map((item, index) => (
+                <div key={index} className={styles.linkItem}>
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.followUs}>
@@ -116,6 +185,7 @@ export const FooterComponent = () => {
               ))}
             </div>
           </div>
+
           <div className={styles.socialMediaWrapper}>
             <div className={styles.socialMediaTitle}>mettā muse Accepts</div>
             <div className={styles.mediaIcons}>

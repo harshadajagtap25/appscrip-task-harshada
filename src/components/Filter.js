@@ -38,7 +38,6 @@ export default function Filter({ handleCallbackFilterOpen }) {
       return;
     }
 
-    // Call API for each category
     const promises = updatedCategories.map((cat) =>
       fetch(`https://fakestoreapi.in/api/products/category?type=${cat}`).then(
         (res) => res.json()
@@ -58,7 +57,7 @@ export default function Filter({ handleCallbackFilterOpen }) {
     if (isMobile) {
       setIsCategoryExpanded(true);
     }
-  }, []);
+  }, [isMobile]);
 
   const handleUnselectAllCategory = async () => {
     if (selectedCategories.length > 0) {
