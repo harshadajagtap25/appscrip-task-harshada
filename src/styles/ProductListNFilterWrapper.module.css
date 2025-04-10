@@ -114,7 +114,6 @@
 }
 
 .productInfo {
-  margin-top: 16px;
 }
 
 .productTitle {
@@ -127,6 +126,30 @@
   margin-top: 8px;
   font-size: 16px;
   color: #888792;
+}
+
+.favouriteBox {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.productInfoNFav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.favoriteIcon {
+  cursor: pointer;
+}
+
+.favoriteIcon:hover {
+  transform: scale(1.1);
 }
 
 .sortDropdownContainer {
@@ -308,6 +331,16 @@
   }
   .dropdownOption {
     font-size: 14px;
+  }
+
+  .favouriteBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .productInfoNFav {
+    margin-top: 8px;
   }
 }
 

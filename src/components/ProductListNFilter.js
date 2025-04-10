@@ -64,7 +64,6 @@ export const ProductListNFilter = () => {
 
     let sortedArray = handleProductSorting(option);
     setFilteredProducts(sortedArray);
-    console.log("sorted array", sortedArray);
   };
 
   return (
