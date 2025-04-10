@@ -2,7 +2,6 @@ import Head from "next/head";
 import HeaderComponent from "../components/Header";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
-import "../styles/globals.css";
 import { ProductListNFilter } from "@/components/ProductListNFilter";
 import { useAppContext } from "@/contexts/AppContext";
 import { FooterComponent } from "@/components/Footer";
