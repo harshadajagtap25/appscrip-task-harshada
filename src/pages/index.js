@@ -98,9 +98,12 @@ export default function Home({ products, apiCategories, error }) {
         />
         <meta
           property="og:image"
-          content="http://localhost:3000/brandLogo.png"
+          content="https://demo-ecommerce-sigma.vercel.app/brandLogo.png"
         />
-        <meta property="og:url" content="http://localhost:3000" />
+        <meta
+          property="og:url"
+          content="https://demo-ecommerce-sigma.vercel.app"
+        />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card tags */}
@@ -112,7 +115,7 @@ export default function Home({ products, apiCategories, error }) {
         />
         <meta
           name="twitter:image"
-          content="http://localhost:3000/brandLogo.png"
+          content="https://demo-ecommerce-sigma.vercel.app/brandLogo.png"
         />
         <script
           type="application/ld+json"
@@ -121,7 +124,7 @@ export default function Home({ products, apiCategories, error }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Appsrip-task",
-              url: "http://localhost:3000",
+              url: "https://demo-ecommerce-sigma.vercel.app",
             }),
           }}
         />
